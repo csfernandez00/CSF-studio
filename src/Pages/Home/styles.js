@@ -4,7 +4,7 @@ import homeBackground from "../../images/HomeBg.png";
 
 export const Background = styled.div`
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	background-image: url(${homeBackground});
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -12,6 +12,7 @@ export const Background = styled.div`
 	z-index: -10;
 	box-shadow: 0px 50px 100px #000, inset 0 -100px 400px #000,
 		inset 0 100px 400px #000;
+	background-attachment: fixed;
 `;
 
 export const BackgroundShadow = styled.div`
@@ -54,5 +55,19 @@ export const LinkBtn = styled(Link)`
 
 	:hover {
 		box-shadow: 0 0 80px #ffffff50, inset 0 0 50px #ffffff50;
+	}
+`;
+
+export const ArrowDown = styled.span`
+	transition: 0.2s;
+	font-size: 3rem;
+	color: #fff;
+	background-color: transparent;
+	position: absolute;
+	top: 92vh;
+	left: 48.6%;
+	cursor: pointer;
+	:hover {
+		transform: translateY(4px);
 	}
 `;

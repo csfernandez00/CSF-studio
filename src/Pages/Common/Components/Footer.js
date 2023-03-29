@@ -64,7 +64,7 @@ function Footer() {
 	const handleSubmit = () => {};
 
 	const scrollToSection = (section) => {
-		window.scrollTo(0, section?.offsetTop - 120);
+		window.scrollTo(0, section?.offsetTop - 100);
 	};
 
 	return (

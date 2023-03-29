@@ -1,11 +1,28 @@
-import React from "react";
-import { Background, BackgroundShadow, GameTitleCont, LinkBtn } from "./styles";
+import React, { useEffect, useState } from "react";
+import {
+	ArrowDown,
+	Background,
+	BackgroundShadow,
+	GameTitleCont,
+	LinkBtn,
+} from "./styles";
 import GameTitle from "../../images/FortuneFollowTitle.png";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 function Home() {
+	const [games, setGames] = useState();
+
+	useEffect(() => {
+		setGames(document.getElementById("games"));
+	}, []);
+
+	const scrollToSection = (section) => {
+		window.scrollTo(0, section?.offsetTop - 100);
+	};
+
 	return (
-		<>
+		<div style={{ marginBottom: "5rem" }}>
 			<Background id="home">
 				<BackgroundShadow></BackgroundShadow>
 			</Background>
@@ -13,7 +30,7 @@ function Home() {
 				<img
 					src={GameTitle}
 					alt="Fortune Follow"
-					style={{ marginLeft: "0%", marginTop: "2rem" }}
+					style={{ marginLeft: "0%", marginTop: "5rem" }}
 				></img>
 				<div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
 					<p
@@ -37,19 +54,16 @@ function Home() {
 						/>
 					</LinkBtn>
 				</div>
-				<BsFillArrowRightCircleFill
-					style={{
-						fontSize: "4rem",
-						color: "#111",
-						position: "absolute",
-						top: "87vh",
-						left: "48.4%",
-						transform: "rotate(90deg)",
-						opacity: "40%",
+				<ArrowDown
+					style={{}}
+					onClick={() => {
+						scrollToSection(games);
 					}}
-				/>
+				>
+					<AiOutlineArrowDown />
+				</ArrowDown>
 			</GameTitleCont>
-		</>
+		</div>
 	);
 }
 
