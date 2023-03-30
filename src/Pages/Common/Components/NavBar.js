@@ -20,7 +20,7 @@ function NavBar() {
 
 	window.onscroll = () => {
 		if (window.scrollY > 40) {
-			setNavBg("#00000099");
+			setNavBg("#050505");
 		} else {
 			setNavBg("transparent");
 		}
@@ -28,7 +28,13 @@ function NavBar() {
 
 	return (
 		<NavContainer style={{ backgroundColor: navBg, transition: ".4s" }}>
-			<NavLogo src={logo} alt="csf games studio"></NavLogo>
+			<NavLogo
+				src={logo}
+				alt="csf games studio"
+				onClick={() => {
+					scrollToSection(home);
+				}}
+			></NavLogo>
 			<NavItemsCont>
 				<NavItem
 					onClick={() => {

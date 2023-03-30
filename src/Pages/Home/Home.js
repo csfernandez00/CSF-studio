@@ -46,7 +46,7 @@ function Home() {
 						Coming out April 2023.
 					</p>
 
-					<LinkBtn>
+					<LinkBtn href="/game/fortune-follow-the-mansion">
 						Keep reading
 						<BsFillArrowRightCircleFill
 							className="flecha"

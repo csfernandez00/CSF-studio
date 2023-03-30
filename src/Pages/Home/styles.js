@@ -35,7 +35,7 @@ export const GameTitleCont = styled.div`
 	padding-left: 0rem;
 `;
 
-export const LinkBtn = styled(Link)`
+export const LinkBtn = styled.a`
 	color: #fff;
 	text-decoration: none;
 	margin-left: 8.5rem;

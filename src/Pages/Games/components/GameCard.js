@@ -27,6 +27,7 @@ function GameCard({ title, image, status }) {
 
 	return (
 		<CardContainer
+			href={`/game/${title}`}
 			onMouseEnter={() => {
 				setMouseOver(true);
 			}}

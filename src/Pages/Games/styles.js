@@ -13,7 +13,7 @@ export const GamesGrid = styled.div`
 	z-index: -10;
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.a`
 	border-radius: 1.5rem;
 	background-size: cover;
 	box-shadow: 10px 10px 20px #00000080, inset 400px 400px 400px #00000010,
