@@ -25,9 +25,23 @@ function GameCard({ title, image, status }) {
 			"10px 10px 20px #00000080, inset 400px 400px 400px #00000070,inset -400px -400px 400px #00000070",
 	};
 
-	return (
+	return status === "released" ? (
 		<CardContainer
 			href={`/game/${title}`}
+			onMouseEnter={() => {
+				setMouseOver(true);
+			}}
+			onMouseLeave={() => {
+				setMouseOver(false);
+			}}
+			style={status === "released" ? boxStyleReleased : boxStyleComing}
+		>
+			{status === "coming" ? (
+				<ComingSoonText>Coming soon</ComingSoonText>
+			) : null}
+		</CardContainer>
+	) : (
+		<CardContainer
 			onMouseEnter={() => {
 				setMouseOver(true);
 			}}
