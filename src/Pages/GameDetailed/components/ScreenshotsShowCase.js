@@ -1,49 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { Miniature, MiniatureSelecter, MainScreenshot } from "../styles";
 
 function ScreenshotsShowCase({ images }) {
+	const [selectedImage, setSelectedImage] = useState(images[0]);
+
 	return (
 		<div
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				gap: "1rem",
+				gap: "0rem",
 			}}
 		>
-			<img
-				src={images[0]}
-				alt="Fortune Follow: The Mansion"
-				style={{
-					width: "100%",
-					objectFit: "cover",
-					borderRadius: "1rem",
-					boxShadow: "0px 0 10px #000",
-				}}
-			/>
+			<MainScreenshot src={selectedImage} alt="Fortune Follow: The Mansion" />
 
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					gap: "1.2%",
-					overflowX: "scroll",
-					padding: ".5rem 0rem 2rem ",
-				}}
-			>
+			<MiniatureSelecter>
 				{images.map((img) => {
 					return (
-						<img
+						<Miniature
+							onClick={() => {
+								setSelectedImage(img);
+							}}
 							src={img}
 							alt="Fortune Follow: The Mansion"
-							style={{
-								width: "24%",
-								objectFit: "cover",
-								borderRadius: ".5rem",
-								boxShadow: "5px 5px  10px #000",
-							}}
+							style={
+								selectedImage === img
+									? { border: "1px solid #777", boxShadow: "0 0 10px #777" }
+									: {}
+							}
 						/>
 					);
 				})}
-			</div>
+			</MiniatureSelecter>
 		</div>
 	);
 }

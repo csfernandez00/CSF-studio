@@ -15,10 +15,11 @@ function LeftColumn({ game }) {
 				Fortune Follow: The Mansion
 			</SectionTitle>
 			<ScreenshotsShowCase images={game.screenshots} />
+
 			<SectionTitle
 				style={{
 					padding: "0",
-					margin: "-2rem 0 -1.5rem 0",
+					margin: "-2rem 0 -2rem 0",
 					fontSize: "1.8rem",
 				}}
 			>
@@ -41,7 +42,7 @@ function LeftColumn({ game }) {
 			<SectionTitle
 				style={{
 					padding: "0",
-					margin: "1rem 0 -1.5rem 0",
+					margin: "0rem 0 -2rem 0",
 					fontSize: "1.4rem",
 				}}
 			>
@@ -55,7 +56,7 @@ function LeftColumn({ game }) {
 					fontSize: "1.1rem",
 					gap: "1rem",
 					marginLeft: "-1rem",
-					marginBottom: "3rem",
+					marginBottom: "2rem",
 				}}
 			>
 				{game.features.map((el) => {
