@@ -67,6 +67,7 @@ function LeftColumn({ game }) {
 				src="https://itch.io/embed/1981302?linkback=true&amp;border_width=3&amp;bg_color=242424&amp;fg_color=eeeeee&amp;link_color=fa5c5c&amp;border_color=777"
 				width="646"
 				height="171"
+				title="Ver en Itch Io"
 			>
 				<a href="https://csfgamestudio.itch.io/fortune-follow-the-mansion">
 					Fortune Follow: The Mansion by CSF Games Studio
@@ -77,6 +78,7 @@ function LeftColumn({ game }) {
 				frameborder="0"
 				width="646"
 				height="190"
+				title="Ver en Steam"
 			></iframe>
 		</>
 	);
