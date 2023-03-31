@@ -76,7 +76,8 @@ function ScreenshotsShowCase({ images }) {
 									top: "-50%",
 									left: "1%",
 									fontSize: "3rem",
-									color: "#222",
+
+									opacity: "15%",
 									cursor: "pointer",
 							  }
 							: {
@@ -85,7 +86,7 @@ function ScreenshotsShowCase({ images }) {
 									top: "-50%",
 									left: "1%",
 									fontSize: "3rem",
-									color: "#222",
+
 									opacity: "0%",
 							  }
 					}
@@ -100,8 +101,8 @@ function ScreenshotsShowCase({ images }) {
 									top: "-50%",
 									left: "87%",
 									fontSize: "3rem",
-									color: "#222",
 									cursor: "pointer",
+									opacity: "15%",
 							  }
 							: {
 									position: "relative",
@@ -109,7 +110,6 @@ function ScreenshotsShowCase({ images }) {
 									top: "-50%",
 									left: "87%",
 									fontSize: "3rem",
-									color: "#222",
 									opacity: "0%",
 							  }
 					}
@@ -121,6 +121,7 @@ function ScreenshotsShowCase({ images }) {
 					{images.map((img, index) => {
 						return (
 							<Miniature
+								key={index}
 								onClick={() => {
 									setSelectedIndex(index);
 								}}
