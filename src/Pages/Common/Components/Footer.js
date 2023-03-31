@@ -177,7 +177,7 @@ function Footer() {
 							width: "95%",
 						}}
 						name="Newsletter"
-						netlify
+						data-netlify="true"
 					>
 						<input
 							name="Email"
