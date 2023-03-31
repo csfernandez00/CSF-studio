@@ -179,6 +179,7 @@ function Footer() {
 						method="POST"
 						name="Newsletter"
 						data-netlify="true"
+						form-name="Newsletter"
 					>
 						<input
 							name="Email"
