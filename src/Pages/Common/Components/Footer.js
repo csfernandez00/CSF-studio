@@ -178,7 +178,6 @@ function Footer() {
 						}}
 						method="POST"
 						name="Newsletter"
-						onSubmit="submit"
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<input
