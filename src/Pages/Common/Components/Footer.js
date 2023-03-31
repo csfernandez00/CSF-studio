@@ -178,13 +178,13 @@ function Footer() {
 						}}
 						method="POST"
 						name="Newsletter"
-						data-netlify="true"
-						form-name="Newsletter"
 					>
+						<input type="hidden" name="form-name" value="contact" />
 						<input
 							name="Email"
 							type="email"
 							placeholder="email..."
+							required
 							style={{
 								outline: "none",
 								border: "none",
