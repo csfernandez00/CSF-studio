@@ -176,6 +176,7 @@ function Footer() {
 							alignItems: "center",
 							width: "95%",
 						}}
+						method="POST"
 						name="Newsletter"
 						data-netlify="true"
 					>
