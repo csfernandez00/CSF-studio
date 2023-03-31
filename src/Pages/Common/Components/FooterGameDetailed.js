@@ -180,7 +180,7 @@ function FooterGameDetailed() {
 						}}
 						method="post"
 						name="Newsletter"
-						action="/contact"
+						onSubmit="submit"
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<input
