@@ -176,7 +176,6 @@ function Footer() {
 							alignItems: "center",
 							width: "95%",
 						}}
-						method="POST"
 						name="Newsletter"
 					>
 						<input type="hidden" name="form-name" value="contact" />
