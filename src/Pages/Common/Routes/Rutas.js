@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import Home from "../../Home/Home";
 import Footer from "../Components/Footer";
@@ -35,7 +35,7 @@ const Rutas = () => {
 						</>
 					}
 				/>
-				<Route
+				{/* <Route
 					path="/game/exodus-run"
 					element={
 						<>
@@ -54,7 +54,8 @@ const Rutas = () => {
 							<FooterGameDetailed />
 						</>
 					}
-				/>
+				/> */}
+				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
 		</Router>
 	);

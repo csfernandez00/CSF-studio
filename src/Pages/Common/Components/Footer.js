@@ -61,8 +61,6 @@ function Footer() {
 		transition: ".2s",
 	};
 
-	const handleSubmit = () => {};
-
 	const scrollToSection = (section) => {
 		window.scrollTo(0, section?.offsetTop - 100);
 	};
@@ -78,7 +76,7 @@ function Footer() {
 						height: "80%",
 						opacity: "20%",
 						paddingTop: "2rem",
-						marginLeft: "5rem",
+						marginLeft: "2rem",
 					}}
 					alt="Csf Games Studio"
 				/>
@@ -178,8 +176,11 @@ function Footer() {
 							alignItems: "center",
 							width: "95%",
 						}}
+						name="Newsletter"
+						netlify
 					>
 						<input
+							name="Email"
 							type="email"
 							placeholder="email..."
 							style={{
@@ -192,16 +193,24 @@ function Footer() {
 								color: "#777",
 							}}
 						></input>
-						<FiSend
-							style={mouseOver4 ? hoverStyle : normalStyle}
-							onClick={handleSubmit}
-							onMouseEnter={() => {
-								setMouseOver4(true);
+						<button
+							type="submit"
+							style={{
+								backgroundColor: "transparent",
+								border: "none",
+								padding: "0",
 							}}
-							onMouseLeave={() => {
-								setMouseOver4(false);
-							}}
-						/>
+						>
+							<FiSend
+								style={mouseOver4 ? hoverStyle : normalStyle}
+								onMouseEnter={() => {
+									setMouseOver4(true);
+								}}
+								onMouseLeave={() => {
+									setMouseOver4(false);
+								}}
+							/>
+						</button>
 					</form>
 					<p style={{ color: "#444" }}>Contact us: csfgamesstudio@gmail.com</p>
 				</FooterCol>
