@@ -178,7 +178,7 @@ function Footer() {
 						}}
 						method="POST"
 						name="Newsletter"
-						data-netlify="true"
+						onSubmit="submit"
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<input
