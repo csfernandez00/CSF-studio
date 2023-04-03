@@ -86,6 +86,7 @@ export const FooterLogo = styled.img`
 	opacity: 20%;
 	padding-top: 2rem;
 	margin-left: 2rem;
+
 	@media screen and (max-width: 700px) {
 		position: absolute;
 		width: 80%;
@@ -104,6 +105,7 @@ export const FooterNav = styled.ul`
 	color: #777;
 	gap: 1rem;
 	font-size: 1.5rem;
+	z-index: 1000;
 	@media screen and (max-width: 700px) {
 		padding: 0;
 	}
