@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
 	FooterCont,
 	FooterGrid,
@@ -7,25 +7,19 @@ import {
 	FooterSocial,
 	FooterNavItem,
 	SectionTitle,
+	FooterLogo,
+	FooterThirdCol,
 } from "./styles";
 import csfLogo from "../../../images/LogoCsf.png";
 import { FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function FooterGameDetailed() {
 	const [mouseOver, setMouseOver] = useState(false);
 	const [mouseOver2, setMouseOver2] = useState(false);
 	const [mouseOver3, setMouseOver3] = useState(false);
 	const [mouseOver4, setMouseOver4] = useState(false);
-	const [home, setHome] = useState();
-	const [games, setGames] = useState();
-	const [news, setNews] = useState();
-
-	useEffect(() => {
-		setHome(document.getElementById("home"));
-		setGames(document.getElementById("games"));
-		setNews(document.getElementById("news"));
-	}, []);
 
 	const styleNormal = {
 		color: "#777",
@@ -61,51 +55,29 @@ function FooterGameDetailed() {
 		transition: ".2s",
 	};
 
-	const handleSubmit = () => {};
-
-	const scrollToSection = (section) => {
-		window.scrollTo(0, section?.offsetTop - 100);
-	};
-
 	return (
 		<FooterCont>
 			<FooterGrid>
-				<img
-					src={csfLogo}
-					style={{
-						objectFit: "cover",
-						width: "80%",
-						height: "80%",
-						opacity: "20%",
-						paddingTop: "2rem",
-						marginLeft: "5rem",
-					}}
-					alt="Csf Games Studio"
-				/>
+				<FooterLogo src={csfLogo} alt="Csf Games Studio" />
 				<FooterCol>
 					<FooterNav>
-						<FooterNavItem
-							onClick={() => {
-								scrollToSection(home);
-							}}
-						>
-							Home
+						<FooterNavItem>
+							<Link to="/" style={{ textDecoration: "none", color: "#aaa" }}>
+								Home
+							</Link>
 						</FooterNavItem>
-						<FooterNavItem
-							onClick={() => {
-								scrollToSection(games);
-							}}
-						>
-							Our Games
+						<FooterNavItem>
+							<Link to="/" style={{ textDecoration: "none", color: "#aaa" }}>
+								Our Games
+							</Link>
 						</FooterNavItem>
-						<FooterNavItem
-							onClick={() => {
-								scrollToSection(news);
-							}}
-						>
-							News
+						<FooterNavItem>
+							<Link to="/" style={{ textDecoration: "none", color: "#aaa" }}>
+								News
+							</Link>
 						</FooterNavItem>
 					</FooterNav>
+					;
 					<FooterSocial>
 						<li>
 							<a
@@ -157,13 +129,7 @@ function FooterGameDetailed() {
 						</li>
 					</FooterSocial>
 				</FooterCol>
-				<FooterCol
-					style={{
-						paddingTop: "4rem",
-						alignItems: "center",
-						marginLeft: "-4rem",
-					}}
-				>
+				<FooterThirdCol>
 					<SectionTitle
 						style={{ color: "#777", padding: "0", marginBottom: "0.5rem" }}
 					>
@@ -182,8 +148,10 @@ function FooterGameDetailed() {
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<input
+							name="Email"
 							type="email"
 							placeholder="email..."
+							required
 							style={{
 								outline: "none",
 								border: "none",
@@ -194,19 +162,27 @@ function FooterGameDetailed() {
 								color: "#777",
 							}}
 						></input>
-						<FiSend
-							style={mouseOver4 ? hoverStyle : normalStyle}
-							onClick={handleSubmit}
-							onMouseEnter={() => {
-								setMouseOver4(true);
+						<button
+							type="submit"
+							style={{
+								backgroundColor: "transparent",
+								border: "none",
+								padding: "0",
 							}}
-							onMouseLeave={() => {
-								setMouseOver4(false);
-							}}
-						/>
+						>
+							<FiSend
+								style={mouseOver4 ? hoverStyle : normalStyle}
+								onMouseEnter={() => {
+									setMouseOver4(true);
+								}}
+								onMouseLeave={() => {
+									setMouseOver4(false);
+								}}
+							/>
+						</button>
 					</form>
 					<p style={{ color: "#444" }}>Contact us: csfgamesstudio@gmail.com</p>
-				</FooterCol>
+				</FooterThirdCol>
 			</FooterGrid>
 		</FooterCont>
 	);

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const GamesCont = styled.div`
 	min-height: 80vh;
+	width: 100%;
 `;
 
 export const GamesGrid = styled.div`
@@ -11,6 +12,12 @@ export const GamesGrid = styled.div`
 	grid-template-rows: repeat(2, 400px);
 	gap: 2rem;
 	z-index: -10;
+
+	@media screen and (max-width: 700px) {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 200px);
+		padding: 0 1rem 4rem;
+	}
 `;
 
 export const CardContainer = styled.a`
@@ -39,4 +46,10 @@ export const ComingSoonText = styled.h2`
 	border-bottom: 8px solid #ffffff;
 	border-top: 8px solid #ffffff;
 	transform: rotate(-40deg);
+
+	@media screen and (max-width: 700px) {
+		font-size: 2rem;
+		border-bottom: 4px solid #ffffff;
+		border-top: 4px solid #ffffff;
+	}
 `;

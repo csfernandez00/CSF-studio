@@ -8,13 +8,12 @@ body {
   background-color: #242424;
   overflow-x: hidden;
   box-shadow: inset 20px 0 100px #000,  inset -20px 0 100px #000;
-  
-  
 }
 
 
 html{
   scroll-behavior: smooth;
+  
 }
 
 code {

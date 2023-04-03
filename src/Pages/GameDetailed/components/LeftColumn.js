@@ -1,6 +1,7 @@
 import React from "react";
 import ScreenshotsShowCase from "./ScreenshotsShowCase";
 import { SectionTitle } from "../../Common/Components/styles";
+import { AboutTheGame } from "../styles";
 
 function LeftColumn({ game }) {
 	return (
@@ -26,19 +27,11 @@ function LeftColumn({ game }) {
 				<hr />
 				About the game
 			</SectionTitle>
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					color: "#999",
-					fontSize: "1.1rem",
-					padding: "0 3rem 0 0",
-				}}
-			>
+			<AboutTheGame style={{}}>
 				<p> {game.about[0]} </p>
 				<p> {game.about[1]} </p>
 				<p> {game.about[2]} </p>
-			</div>
+			</AboutTheGame>
 			<SectionTitle
 				style={{
 					padding: "0",
@@ -66,7 +59,7 @@ function LeftColumn({ game }) {
 			<iframe
 				frameborder="0"
 				src="https://itch.io/embed/1981302?linkback=true&amp;border_width=3&amp;bg_color=242424&amp;fg_color=eeeeee&amp;link_color=fa5c5c&amp;border_color=777"
-				width="646"
+				width="100%"
 				height="171"
 				title="Ver en Itch Io"
 			>
@@ -77,7 +70,7 @@ function LeftColumn({ game }) {
 			<iframe
 				src="https://store.steampowered.com/widget/2366450/"
 				frameborder="0"
-				width="646"
+				width="100%"
 				height="190"
 				title="Ver en Steam"
 			></iframe>

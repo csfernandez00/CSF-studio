@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Miniature, MiniatureSelecter, MainScreenshot } from "../styles";
 import {
-	BsFillArrowRightCircleFill,
-	BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+	Miniature,
+	MiniatureSelecter,
+	MainScreenshot,
+	FlechaDerecha,
+} from "../styles";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { useEffect } from "react";
 
 function ScreenshotsShowCase({ images }) {
@@ -59,61 +61,68 @@ function ScreenshotsShowCase({ images }) {
 				display: "flex",
 				flexDirection: "column",
 				gap: "0rem",
+				width: "100%",
 			}}
 		>
-			<div style={{ userSelect: "none" }}>
+			<div
+				style={{
+					userSelect: "none",
+					width: "100%",
+				}}
+			>
 				<MainScreenshot
 					src={images[selectedIndex]}
 					alt="Fortune Follow: The Mansion"
 				></MainScreenshot>
-				<BsFillArrowLeftCircleFill
-					onClick={prevImage}
-					style={
-						selectedIndex !== 0
-							? {
-									position: "relative",
-									color: "white",
-									top: "-50%",
-									left: "1%",
-									fontSize: "3rem",
 
-									opacity: "15%",
-									cursor: "pointer",
-							  }
-							: {
-									position: "relative",
-									color: "white",
-									top: "-50%",
-									left: "1%",
-									fontSize: "3rem",
+				<div
+					style={{
+						position: "relative",
+						width: "53.2%",
+						display: "flex",
+						flexDirection: "row",
+						justifyContent: "space-between",
+						top: "-50%",
+					}}
+				>
+					<BsFillArrowLeftCircleFill
+						onClick={prevImage}
+						style={
+							selectedIndex !== 0
+								? {
+										position: "relative",
+										color: "white",
+										top: "-50%",
+										left: "1%",
+										fontSize: "3rem",
 
-									opacity: "0%",
-							  }
-					}
-				></BsFillArrowLeftCircleFill>
-				<BsFillArrowRightCircleFill
-					onClick={nextImage}
-					style={
-						selectedIndex !== images.length - 1
-							? {
-									position: "relative",
-									color: "white",
-									top: "-50%",
-									left: "87%",
-									fontSize: "3rem",
-									cursor: "pointer",
-									opacity: "15%",
-							  }
-							: {
-									position: "relative",
-									color: "white",
-									top: "-50%",
-									left: "87%",
-									fontSize: "3rem",
-									opacity: "0%",
-							  }
-					}
-				></BsFillArrowRightCircleFill>
+										opacity: "15%",
+										cursor: "pointer",
+								  }
+								: {
+										position: "relative",
+										color: "white",
+										top: "-50%",
+										left: "1%",
+										fontSize: "3rem",
+
+										opacity: "0%",
+								  }
+						}
+					></BsFillArrowLeftCircleFill>
+					<FlechaDerecha
+						onClick={nextImage}
+						style={
+							selectedIndex !== images.length - 1
+								? {
+										opacity: "15%",
+								  }
+								: {
+										opacity: "0%",
+								  }
+						}
+					></FlechaDerecha>
+				</div>
 			</div>
 
 			<MiniatureSelecter style={{ userSelect: "none" }}>

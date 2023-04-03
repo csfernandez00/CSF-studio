@@ -12,6 +12,7 @@ export const Background = styled.div`
 	box-shadow: 0px 50px 100px #000, inset 0 -100px 400px #000,
 		inset 0 100px 400px #000;
 	background-attachment: fixed;
+	background-position: 50% 50%;
 `;
 
 export const BackgroundShadow = styled.div`
@@ -32,6 +33,10 @@ export const GameTitleCont = styled.div`
 	width: 55%;
 	height: 100vh;
 	padding-left: 0rem;
+	@media screen and (max-width: 700px) {
+		width: 100%;
+		padding-top: 7rem;
+	}
 `;
 
 export const LinkBtn = styled.a`
@@ -54,6 +59,36 @@ export const LinkBtn = styled.a`
 
 	:hover {
 		box-shadow: 0 0 80px #ffffff50, inset 0 0 50px #ffffff50;
+	}
+
+	@media screen and (max-width: 700px) {
+		margin: auto;
+		width: 80%;
+	}
+`;
+
+export const ImgHome = styled.img`
+	margin-left: 0%;
+	margin-top: 5rem;
+
+	@media screen and (max-width: 700px) {
+		margin-top: 3rem;
+		width: 100%;
+		margin-left: -1rem;
+	}
+`;
+
+export const IntroParagraph = styled.p`
+	color: #aaa;
+	padding-left: 9rem;
+	margin-top: -6rem;
+	font-size: 1.7rem;
+	font-style: italic;
+	@media screen and (max-width: 700px) {
+		margin-top: -1rem;
+		padding: 0 2.5rem;
+		font-size: 1.6rem;
+		text-align: left;
 	}
 `;
 

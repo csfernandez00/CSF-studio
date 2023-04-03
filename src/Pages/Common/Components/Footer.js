@@ -7,6 +7,8 @@ import {
 	FooterSocial,
 	FooterNavItem,
 	SectionTitle,
+	FooterLogo,
+	FooterThirdCol,
 } from "./styles";
 import csfLogo from "../../../images/LogoCsf.png";
 import { FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
@@ -68,18 +70,7 @@ function Footer() {
 	return (
 		<FooterCont>
 			<FooterGrid>
-				<img
-					src={csfLogo}
-					style={{
-						objectFit: "cover",
-						width: "80%",
-						height: "80%",
-						opacity: "20%",
-						paddingTop: "2rem",
-						marginLeft: "2rem",
-					}}
-					alt="Csf Games Studio"
-				/>
+				<FooterLogo src={csfLogo} alt="Csf Games Studio" />
 				<FooterCol>
 					<FooterNav>
 						<FooterNavItem
@@ -155,13 +146,7 @@ function Footer() {
 						</li>
 					</FooterSocial>
 				</FooterCol>
-				<FooterCol
-					style={{
-						paddingTop: "4rem",
-						alignItems: "center",
-						marginLeft: "-4rem",
-					}}
-				>
+				<FooterThirdCol>
 					<SectionTitle
 						style={{ color: "#777", padding: "0", marginBottom: "0.5rem" }}
 					>
@@ -214,7 +199,7 @@ function Footer() {
 						</button>
 					</form>
 					<p style={{ color: "#444" }}>Contact us: csfgamesstudio@gmail.com</p>
-				</FooterCol>
+				</FooterThirdCol>
 			</FooterGrid>
 		</FooterCont>
 	);

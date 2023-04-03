@@ -1,3 +1,4 @@
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import styled from "styled-components";
 
 export const GameDetailedContainer = styled.div`
@@ -7,7 +8,13 @@ export const GameDetailedContainer = styled.div`
 	margin: auto;
 	display: grid;
 	grid-template-columns: 65% 30%;
+
 	gap: 2.5rem;
+	@media screen and (max-width: 700px) {
+		grid-template-columns: 100%;
+		width: 90%;
+		padding: 5rem 0rem;
+	}
 `;
 
 export const GameDetailedGridColumn = styled.div`
@@ -15,6 +22,9 @@ export const GameDetailedGridColumn = styled.div`
 	flex-direction: column;
 	gap: 1.5rem;
 	margin-top: 10vh;
+	@media screen and (max-width: 700px) {
+		margin-top: 0;
+	}
 `;
 
 export const Miniature = styled.img`
@@ -27,6 +37,10 @@ export const Miniature = styled.img`
 
 	:hover {
 		border: 1px solid #333;
+	}
+
+	@media screen and (max-width: 700px) {
+		margin-top: 0;
 	}
 `;
 
@@ -46,4 +60,28 @@ export const MainScreenshot = styled.img`
 	border-radius: 1rem;
 	box-shadow: 0px 0 10px #000;
 	user-select: none;
+`;
+
+export const AboutTheGame = styled.div`
+	display: flex;
+	flex-direction: column;
+	color: #999;
+	font-size: 1.1rem;
+	padding: 0 3rem 0 0;
+	@media screen and (max-width: 700px) {
+		padding: 0;
+	}
+`;
+
+export const FlechaDerecha = styled(BsFillArrowRightCircleFill)`
+	position: relative;
+	color: white;
+	top: -50%;
+	left: 87%;
+	font-size: 3rem;
+	cursor: pointer;
+	opacity: 15%;
+	@media screen and (max-width: 700px) {
+		left: 87%;
+	}
 `;

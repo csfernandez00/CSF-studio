@@ -4,6 +4,8 @@ import {
 	Background,
 	BackgroundShadow,
 	GameTitleCont,
+	ImgHome,
+	IntroParagraph,
 	LinkBtn,
 } from "./styles";
 import GameTitle from "../../images/FortuneFollowTitle.png";
@@ -27,24 +29,12 @@ function Home() {
 				<BackgroundShadow></BackgroundShadow>
 			</Background>
 			<GameTitleCont>
-				<img
-					src={GameTitle}
-					alt="Fortune Follow"
-					style={{ marginLeft: "0%", marginTop: "5rem" }}
-				></img>
+				<ImgHome src={GameTitle} alt="Fortune Follow"></ImgHome>
 				<div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
-					<p
-						style={{
-							color: "#aaa",
-							paddingLeft: "9rem",
-							marginTop: "-6rem",
-							fontSize: "1.7rem",
-							fontStyle: "italic",
-						}}
-					>
+					<IntroParagraph>
 						A photorealistic puzzle and horror game. <br />
 						Coming out April 2023.
-					</p>
+					</IntroParagraph>
 
 					<LinkBtn href="/game/fortune-follow-the-mansion">
 						Keep reading
